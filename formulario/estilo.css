@@ -5,39 +5,76 @@
     font-family: sans-serif;
 }
 
+
+
+/*Aqui colocanis estilização no corpo da pagina*/
 body{
-    width: 100%;
-    height: 100vh;
-    background-image: url(imagens/paisagem.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%; /*Largura*/
+    height: 100vh;/*Tamanho*/
+    background-image: url(imagens/paisagem.jpg);/*Aqui inserimos a imagem*/
+    background-position: center;/*posicionamos a imagem ao centro*/
+    background-repeat: no-repeat;/*Colocamos para que a img nao se repita*/
+    background-size: cover;/*Aqui atribuimos para que a imagem fique sobre toda nossa página*/
+    display: flex;/*Responsavel por colocar os itens na mesma linha (lado a lado)*/
+    align-items: center;/*Alinhar os itens para p centro*/
+    justify-content: center;/*Justificar conteudo ao centro */
 }
 
-.container{
-    max-width: 1280px;
-    margin: 0 auto;
+.container{/*Aqui estamos chamando nossa class*/
+    max-width: 1280px;/*Atribuimos aqui um tamanho maximo de largura que essa class ira exercer*/
+    margin: 0 auto;/*dizemos ao navegador que as margens superior e inferior a 0 e a da esquerda e direita são automáticas*/
 }
 
-form{
-    background-color: white;
-    max-width: 500px;
-    height: 450px;
-    padding: 40px;
-    border-radius: 20px;
+form{/*Aqui chamamos nosso form para estilização*/
+    background-color: white;/*colocamos uma cor de fundo*/
+    max-width: 500px;/*Atribuimos aqui um tamanho maximo de largura que esse formulario ira exercer*/
+    height: 450px;/*Largura do formulario*/
+    padding: 40px;/*Preechimento*/
+    border-radius: 20px;/*Arredondamento das bordas do formulario*/
 }
 
-form h1{
-    text-align: center;
-    font-size: 30px;
+form h1{ /*Chamamos nosso texto para estilização*/
+    text-align: center;/*alinhamos ao centro*/
+    font-size: 30px;/*Tamanho da letra*/
+    color: black;/*Cor da letra*/
+}
+
+form p{ /*Chamamos nosso paragrafo para estilização*/
+    text-align: center;/*Alinhando para o centro nosso paragrafo */
+    margin: 20px 0;/*dizemos ao navegador que as margens superior a inferior são iguais a 20 e as da esqueda e direita são 0*/
+}
+
+.imput-single{ /*chamamos nossa class */
+  position: relative; /*posição relativa*/
+  margin: 20px 0;/*dizemos ao navegador que as margens superior e inferior a 20 e as da esquerda e direita são 0*/
+}
+
+.imput-single > label {/*chamamos nossa label para estilização*/
+    position: absolute;/*atribuimos uma posição absoluta em relação ao formuçário*/
+    left: 0;/*Zeramos a margem a esquerda*/
+    bottom: 5px;/*Margem inferior atribuimos para 5px*/
+    transition: all 0.2s;/*Inserimos uma transição total para 0.2*/
+    cursor: text;/*Aqui é para quando passar o mouse, aparecer o indicador de texto*/
+}
+
+.input{ /*Aqui chamamos nosso Submit ou seja, o botão para estilizaçãp*/
+    width:100% ;
+    border: 0;
+    border-bottom: 2px solid #ccc; /*Estilização da borda inferior*/
+    padding: 5px;
+    font-size: 17px;
+    outline: 0;
+}
+
+form> .imput-single > input:focus ~ label, 
+form .input:valid ~ label{
+    transform: translateY(-25px);
+    font-size: 12px;
     color: black;
 }
 
-form p{
+.btn { /*aqui estamos chamando nossa class .btn para estilização*/
+    width: 100%;
     text-align: center;
-    margin: 20px 0;
 }
 
